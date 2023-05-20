@@ -1,33 +1,31 @@
 import React from "react";
-// Import All Icons from react-icons
-import { BiUndo } from "react-icons/bi";
+import {
+  AiOutlineMinus,
+  AiOutlinePlus,
+  AiFillCaretDown,
+  AiOutlineBold,
+  AiOutlineItalic,
+  AiOutlineUnderline,
+} from "react-icons/ai";
+import { BiUndo, BiCommentAdd, BiImageAlt } from "react-icons/bi";
 import { GrRedo } from "react-icons/gr";
 import { AiOutlinePrinter } from "react-icons/ai";
-import { MdSpellcheck } from "react-icons/md";
-import { TfiPaintRoller } from "react-icons/tfi";
-import { AiFillCaretDown } from "react-icons/ai";
-import { AiOutlinePlus } from "react-icons/ai";
-import { AiOutlineMinus } from "react-icons/ai";
-import { AiOutlineBold } from "react-icons/ai";
-import { AiOutlineItalic } from "react-icons/ai";
-import { AiOutlineUnderline } from "react-icons/ai";
+import {
+  MdSpellcheck,
+  MdFormatAlignLeft,
+  MdOutlineFormatLineSpacing,
+  MdChecklist,
+  MdFormatListBulleted,
+  MdFormatListNumbered,
+  MdFormatIndentDecrease,
+  MdFormatIndentIncrease,
+} from "react-icons/md";
 import { GiHighlighter } from "react-icons/gi";
 import { FiLink2 } from "react-icons/fi";
-import { BiCommentAdd } from "react-icons/bi";
-import { BiImageAlt } from "react-icons/bi";
-import { MdFormatAlignLeft } from "react-icons/md";
-// import MdFormatAlignRight from "react-icons/md";
-// import GrTextAlignCenter from "react-icons/md";
-// import MdFormatAlignJustify from "react-icons/md";
-import { MdOutlineFormatLineSpacing } from "react-icons/md";
-import { MdChecklist } from "react-icons/md";
-import { MdFormatListBulleted } from "react-icons/md";
-import { MdFormatListNumbered } from "react-icons/md";
-import { MdFormatIndentDecrease } from "react-icons/md";
-import { MdFormatIndentIncrease } from "react-icons/md";
 import { RiFormatClear } from "react-icons/ri";
 import { HiPencil } from "react-icons/hi";
 import { RxCaretUp } from "react-icons/rx";
+import { TfiPaintRoller } from "react-icons/tfi";
 
 const Toolbar = () => {
   return (
