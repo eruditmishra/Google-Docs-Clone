@@ -6,7 +6,6 @@ import mapsIcon from "../Assets/maps-icon.png";
 import tasksIcon from "../Assets/tasks-icon.png";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import { RxCaretRight } from "react-icons/rx";
 
 const SideBar = () => {
   return (
