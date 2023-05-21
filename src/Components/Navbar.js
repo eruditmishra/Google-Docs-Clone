@@ -4,7 +4,10 @@ import userIcon from "../Assets/user-icon.png";
 import { BsChatRightText } from "react-icons/bs";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
-import { MdOutlineLock } from "react-icons/md";
+import { MdOutlineLock, MdDriveFileMoveOutline } from "react-icons/md";
+import { AiOutlineStar } from "react-icons/ai";
+import { TiCloudStorageOutline } from "react-icons/ti";
+import { BiHistory } from "react-icons/bi";
 
 const Navbar = () => {
   return (
@@ -20,12 +23,30 @@ const Navbar = () => {
           </div>
           {/* Menu and document name container*/}
           <div className="flex flex-col justify-start gap-[0.4rem]">
-            {/* Document Name */}
-            <div
-              contentEditable="true"
-              className=" text-[1.125rem] leading-[1.375rem] text-[#444746]"
-            >
-              Untitled document
+            {/* document name and icons container */}
+            <div className="flex gap-6 items-center">
+              {/* Document Name */}
+              <div
+                contentEditable="true"
+                className=" text-[1.125rem] leading-[1.375rem] text-[#444746]"
+              >
+                Untitled document
+              </div>
+              {/* Icons Container */}
+              <div className="flex items-center gap-4 text-[1.1rem]">
+                {/* Star icon */}
+                <div>
+                  <AiOutlineStar />
+                </div>
+                {/* Move Icon */}
+                <div>
+                  <MdDriveFileMoveOutline />
+                </div>
+                {/* Cloud Icon */}
+                <div>
+                  <TiCloudStorageOutline />
+                </div>
+              </div>
             </div>
             {/* Menu Container */}
             <div className="flex items-center justify-center gap-4 text-[0.875rem] leading-[0.73125rem] tracking-[0.0125rem] text-[#202124]">
@@ -42,7 +63,11 @@ const Navbar = () => {
         </div>
         {/* right part of the navbar */}
         <div className="flex gap-6 items-center justify-center">
+          <div className="text-[1.6rem]">
+            <BiHistory />
+          </div>
           {/* Message icon */}
+
           <div className="text-[1.3rem] font-bold">
             <BsChatRightText />
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -32,49 +32,49 @@ const Toolbar = () => {
     // component wrapper
     <>
       {/* Toolbar Wrapper */}
-      <div className="flex items-center justify-between mx-4 px-4 py-2 rounded-full bg-[#EDF2FA]">
+      <div className="flex items-center justify-between mx-4 my-2 px-4 py-2 rounded-full bg-[#EDF2FA] text-[0.875rem]">
         {/* Left Container - Contains all the tools */}
         <div className="flex items-center justify-center gap-4">
           {/* Formatting Tools Container */}
           <div className="flex items-center justify-center gap-4 ">
             {/* Undo */}
-            <div className="text-[1.2rem]">
+            <div className="text-[1.2rem] cursor-pointer">
               <BiUndo />
             </div>
             {/* Redo */}
-            <div>
+            <div className="cursor-pointer">
               <GrRedo />
             </div>
             {/* Print */}
-            <div>
+            <div className="cursor-pointer">
               <AiOutlinePrinter />
             </div>
             {/* Spell Check */}
-            <div>
+            <div className="cursor-pointer">
               <MdSpellcheck />
             </div>
             {/* Format Painter */}
-            <div>
+            <div className="cursor-pointer">
               <TfiPaintRoller />
             </div>
             {/* Percentage Container */}
-            <div className="flex justify-center items-center gap-2">
+            <div className="flex justify-center items-center gap-2 cursor-pointer">
               <p>100%</p>
               <AiFillCaretDown className="text-[0.7rem]" />
             </div>
           </div>
           {/* Styles Container */}
-          <div className="flex items-center justify-center gap-4 border-[#C7C7C7] border-l-2 pl-4">
+          <div className="flex items-center justify-center gap-4 border-[#C7C7C7] border-l-2 pl-4 cursor-pointer">
             <p>Normal text</p>
             <AiFillCaretDown className="text-[0.7rem]" />
           </div>
           {/* Font Container */}
-          <div className="flex items-center gap-8 border-[#C7C7C7] border-l-2 pl-4">
+          <div className="flex items-center gap-8 border-[#C7C7C7] border-l-2 pl-4 cursor-pointer">
             <p>Arial</p>
             <AiFillCaretDown className="text-[0.7rem]" />
           </div>
           {/* Font Size Container */}
-          <div className="flex items-center justify-center gap-2 border-[#C7C7C7] border-l-2 pl-4">
+          <div className="flex items-center justify-center gap-2 border-[#C7C7C7] border-l-2 pl-4 cursor-pointer">
             <p className="font-bold text-[0.875rem]">
               <AiOutlineMinus />
             </p>
@@ -84,22 +84,29 @@ const Toolbar = () => {
             >
               11
             </div>
-            <p>
+            {/* <div className=" border-black border-[0.02rem] px-[0.5rem] text-[0.875rem] text-center ">
+              <input
+                type="number"
+                onChange={handleFontSizeChange}
+                value={fontSize}
+              />
+            </div> */}
+            <p className="cursor-pointer">
               <AiOutlinePlus />
             </p>
           </div>
           {/* Font Styles Container */}
           <div className="flex items-center justify-center gap-2 border-[#C7C7C7] border-l-2 pl-4">
             {/* Bold */}
-            <div>
+            <div className="cursor-pointer">
               <AiOutlineBold />
             </div>
             {/* Italic */}
-            <div>
+            <div className="cursor-pointer">
               <AiOutlineItalic />
             </div>
             {/* Underline */}
-            <div>
+            <div className="cursor-pointer">
               <AiOutlineUnderline />
             </div>
             {/* Text Color */}
@@ -112,54 +119,54 @@ const Toolbar = () => {
           {/* Insert Link/pic/comment container */}
           <div className="flex items-center justify-center gap-4 border-[#C7C7C7] border-l-2 pl-4">
             {/* Link */}
-            <div>
+            <div className="cursor-pointer">
               <FiLink2 />
             </div>
             {/* Comment */}
-            <div>
+            <div className="cursor-pointer">
               <BiCommentAdd />
             </div>
             {/* Image */}
-            <div>
+            <div className="cursor-pointer">
               <BiImageAlt />
             </div>
           </div>
           {/* Indent Container */}
           <div className="flex items-center justify-center gap-4 border-[#C7C7C7] border-l-2 pl-4">
             {/* Text Alignment */}
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-center cursor-pointer">
               <MdFormatAlignLeft />
               <AiFillCaretDown className="text-[0.7rem]" />
             </div>
             {/* Paragraph Spacing */}
-            <div>
+            <div className="cursor-pointer">
               <MdOutlineFormatLineSpacing />
             </div>
             {/* Checklist */}
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-center cursor-pointer">
               <MdChecklist />
               <AiFillCaretDown className="text-[0.7rem]" />
             </div>
             {/* Bulleted List */}
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-center cursor-pointer">
               <MdFormatListBulleted />
               <AiFillCaretDown className="text-[0.7rem]" />
             </div>
             {/* Numbered List */}
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center justify-center cursor-pointer">
               <MdFormatListNumbered />
               <AiFillCaretDown className="text-[0.7rem]" />
             </div>
             {/* Decrease Indent */}
-            <div>
+            <div className="cursor-pointer">
               <MdFormatIndentDecrease />
             </div>
             {/* Increase Indent */}
-            <div>
+            <div className="cursor-pointer">
               <MdFormatIndentIncrease />
             </div>
             {/* Clear Formatting */}
-            <div>
+            <div className="cursor-pointer">
               <RiFormatClear />
             </div>
           </div>

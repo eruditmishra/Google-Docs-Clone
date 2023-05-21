@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const Editor = () => {
+const Editor = ({ props }) => {
   const [documentContent, setDocumentContent] = useState("");
   const textareaRef = useRef(null);
+
   const handleInputChange = (e) => {
     e.preventDefault();
     setDocumentContent(e.target.value);
@@ -23,9 +24,10 @@ const Editor = () => {
   }, []);
 
   return (
-    // Component Wrapper
-
-    <div className="h-[70rem] flex justify-center items-center my-4">
+    <div
+      className={`h-[70rem] flex justify-center items-center my-4
+      }`}
+    >
       <div className="w-[55rem] h-[70rem] bg-white  border-[#d2d4d9] border-2">
         <textarea
           value={documentContent}

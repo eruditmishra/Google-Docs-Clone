@@ -1,0 +1,33 @@
+/* Add custom styles to override default scrollbar styles */
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Style the track */
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* Style the thumb */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(219, 220, 222);
+  border-radius: 0.25rem;
+}
+
+/* Change the scrollbar position to the left */
+::-webkit-scrollbar-thumb:vertical {
+  transform: translateX(-0.5rem);
+}
+
+.scrollable-container {
+  height: calc(
+    100vh - 84px
+  ); /* Adjust the height as needed based on your layout */
+  overflow-y: auto;
+}
+
+.scrollable-content {
+  padding-right: 12px; /* Adjust the padding to prevent the content from overlapping with the scrollbar */
+}
